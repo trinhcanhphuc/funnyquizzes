@@ -7,7 +7,7 @@ import {
 import { Text } from "../components";
 import { theme } from "../constants";
 
-function Term(props) {
+function TermForm(props) {
 	return (
 		<ScrollView
 			style={{ marginVertical: theme.sizes.padding }}
@@ -121,4 +121,4 @@ function Term(props) {
 	)
 }
 
-export default Term
+export default TermForm

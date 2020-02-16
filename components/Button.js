@@ -18,12 +18,14 @@ class Button extends Component {
       shadow,
       children,
       red,
+      icon,
       ...props
     } = this.props;
 
     const buttonStyles = [
       styles.button,
       shadow && styles.shadow,
+      icon && styles.icon,
       color && styles[color], // predefined styles colors for backgroundColor
       color && !styles[color] && { backgroundColor: color }, // custom backgroundColor
       style
@@ -85,6 +87,13 @@ const styles = StyleSheet.create({
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 10
+  },
+  icon: {
+    flexDirection: "row",
+    justifyContent: "space-between",
+    alignItems: "center",
+    paddingLeft: "40%" ,
+    paddingRight: "5%"
   },
   accent: { backgroundColor: theme.colors.accent },
   primary: { backgroundColor: theme.colors.primary },
