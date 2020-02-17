@@ -27,7 +27,10 @@ class Home extends Component {
       showExitForm: false
     };
   }
+
   renderButtons() {
+    const { navigation } = this.props;
+
     return (
       <Block middle flex={0.5} margin={[0, theme.sizes.padding * 4]}>
         <Button color="green" shadow icon onPress={() => navigation.navigate("Challenges")}>
@@ -143,7 +146,6 @@ class Home extends Component {
   }
   
   render() {
-    const { navigation } = this.props;
 
     return (
       <Block>

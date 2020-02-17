@@ -4,6 +4,8 @@ import { createAppContainer } from "react-navigation";
 import { createStackNavigator } from "react-navigation-stack";
 
 import Home from "../screens/Home";
+import Challenges from "../screens/Challenges";
+import Challenge from "../screens/Challenge";
 import Login from "../screens/Login";
 import SignUp from "../screens/SignUp";
 import Forgot from "../screens/Forgot";
@@ -17,6 +19,8 @@ import { theme } from "../constants";
 const screens = createStackNavigator(
   {
     Home,
+    Challenges,
+    Challenge,
     Login,
     SignUp,
     Forgot,
