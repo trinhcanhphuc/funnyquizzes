@@ -7,5 +7,5 @@ export function GetChallengeById(id) {
 }
 
 export function CountChallenges() {
-  return challenges.length
+  return challenges.length;
 }

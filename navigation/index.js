@@ -21,6 +21,7 @@ const screens = createStackNavigator(
     Home,
     Challenges,
     Challenge,
+    Settings,
     Login,
     SignUp,
     Forgot,

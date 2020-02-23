@@ -34,7 +34,7 @@ class Challenge extends Component {
 
   playNextChallenge(challenge) {
     this.updateScore(challenge);
-    challenge.id == CountChallenges ?
+    challenge.id == CountChallenges() ?
       this.setState({showChampion: true}) :
       this.setState({showCorrect: true});
   }

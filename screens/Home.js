@@ -39,12 +39,12 @@ class Home extends Component {
           </Text>
           <Image source={require("../assets/icons/play.png")} style={styles.btnIcon}></Image>
         </Button>
-        <Button color="yellow" shadow icon onPress={() => navigation.navigate("Setting")}>
+        <Button color="yellow" shadow icon onPress={() => navigation.navigate("Settings")}>
           <Text center semibold  transform="uppercase" color="white">
             Setting
           </Text>
-          <Image 
-            source={require("../assets/icons/setting.png")} 
+          <Image
+            source={require("../assets/icons/setting.png")}
             style={styles.btnIcon}>
           </Image>
         </Button>
@@ -78,10 +78,10 @@ class Home extends Component {
           </Text>
 
           <TermForm></TermForm>
-          
+
           <Block middle padding={[theme.sizes.base / 2, 0]}>
             <Button
-              gradient
+              color="green"
               onPress={() => this.setState({ showTermForm: false })}
             >
               <Text center white>
@@ -121,7 +121,7 @@ class Home extends Component {
                 paddingLeft: "5%",
                 paddingRight: "5%"
               }}>
-              <Button color="red" shadow icon 
+              <Button color="red" shadow icon
               style={{width:150, paddingLeft: "15%"}}
               onPress={() => BackHandler.exitApp()}
                 >
@@ -130,7 +130,7 @@ class Home extends Component {
                 </Text>
                 <Image source={require("../assets/icons/yes.png")} style={styles.btnIcon}></Image>
               </Button>
-              <Button color="white" shadow icon 
+              <Button color="white" shadow icon
               style={{width:150, paddingLeft: "15%"}}
               onPress={() => this.setState({ showExitForm: false })}>
                 <Text center semibold black transform="uppercase">
@@ -144,7 +144,7 @@ class Home extends Component {
       </Modal>
     );
   }
-  
+
   render() {
 
     return (
