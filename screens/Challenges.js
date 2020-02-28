@@ -13,6 +13,7 @@ import * as SQLite from "expo-sqlite";
 
 import { Button, Block, Text } from "../components";
 import { theme, mocks } from "../constants";
+import { CreateTableScore, CreateScore, GetScore } from "../services/score";
 
 const { width: SCREEN_WIDTH } = Dimensions.get("window");
 const db = SQLite.openDatabase('funnyquizzes.db');
@@ -32,11 +33,8 @@ class Challenges extends Component {
   }
 
   componentDidMount() {
-    db.transaction(tx => {
-      tx.executeSql(
-        "CREATE TABLE IF NOT EXISTS score (id INTERGER PRIMARY KEY NOT NULL, challenge_id INT NOT NULL);"
-      );
-      tx.executeSql("INSERT INTO score (id, challenge_id) VALUES (1, 0)");
+    CreateTableScore().then((result) => {
+      CreateScore(0);
     });
   }
 
@@ -57,10 +55,10 @@ class Challenges extends Component {
 
   renderChallenges() {
     const { challenges } = this.props;
-    db.transaction(tx => {
-      tx.executeSql("SELECT * FROM score WHERE id = 1 LIMIT 1", [], (_, { rows: { _array } }) =>
-        this.setState({currentChallenge: _array[0].challenge_id})
-      );
+    GetScore().then((result) => {
+      if(result){
+        this.setState({currentChallenge: result.challenge_id})
+      }
     });
 
     return (

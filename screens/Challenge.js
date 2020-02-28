@@ -14,6 +14,7 @@ import * as SQLite from "expo-sqlite";
 
 import { theme } from "../constants";
 import { GetChallengeById, CountChallenges } from "../services/challenge";
+import { UpdateScore } from "../services/score";
 
 const { width, height } = Dimensions.get("window");
 const db = SQLite.openDatabase('funnyquizzes.db');
@@ -40,9 +41,7 @@ class Challenge extends Component {
   }
 
   updateScore(challenge) {
-    db.transaction(tx => {
-      tx.executeSql("UPDATE score SET challenge_id = ? WHERE id = 1", [challenge.id]);
-    });
+    UpdateScore(challenge.id);
   }
 
   renderOptions(challenge) {
