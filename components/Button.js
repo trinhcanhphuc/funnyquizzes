@@ -64,13 +64,13 @@ class Button extends Component {
 }
 
 Button.defaultProps = {
-  startColor: theme.colors.primary,
-  endColor: theme.colors.secondary,
+  startColor: theme.colors.light.primary,
+  endColor: theme.colors.light.secondary,
   start: { x: 0, y: 0 },
   end: { x: 1, y: 1 },
   locations: [0.1, 0.9],
   opacity: 0.8,
-  color: theme.colors.white
+  color: theme.colors.light.white
 };
 
 export default Button;
@@ -83,29 +83,28 @@ const styles = StyleSheet.create({
     marginVertical: theme.sizes.padding / 3
   },
   shadow: {
-    shadowColor: theme.colors.black,
+    shadowColor: theme.colors.light.black,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 10
   },
   icon: {
     flexDirection: "row",
-    justifyContent: "space-between",
+    justifyContent: "flex-end",
     alignItems: "center",
-    paddingLeft: "40%" ,
     paddingRight: "5%"
   },
-  accent: { backgroundColor: theme.colors.accent },
-  primary: { backgroundColor: theme.colors.primary },
-  secondary: { backgroundColor: theme.colors.secondary },
-  tertiary: { backgroundColor: theme.colors.tertiary },
-  black: { backgroundColor: theme.colors.black },
-  white: { backgroundColor: theme.colors.white },
-  gray: { backgroundColor: theme.colors.gray },
-  gray2: { backgroundColor: theme.colors.gray2 },
-  gray3: { backgroundColor: theme.colors.gray3 },
-  gray4: { backgroundColor: theme.colors.gray4 },
-  red: { backgroundColor: theme.colors.red },
-  yellow: { backgroundColor: theme.colors.yellow },
-  green: { backgroundColor: theme.colors.green }
+  accent: { backgroundColor: theme.colors.light.accent },
+  primary: { backgroundColor: theme.colors.light.primary },
+  secondary: { backgroundColor: theme.colors.light.secondary },
+  tertiary: { backgroundColor: theme.colors.light.tertiary },
+  black: { backgroundColor: theme.colors.light.black },
+  white: { backgroundColor: theme.colors.light.white },
+  gray: { backgroundColor: theme.colors.light.gray },
+  gray2: { backgroundColor: theme.colors.light.gray2 },
+  gray3: { backgroundColor: theme.colors.light.gray3 },
+  gray4: { backgroundColor: theme.colors.light.gray4 },
+  red: { backgroundColor: theme.colors.light.red },
+  yellow: { backgroundColor: theme.colors.light.yellow },
+  green: { backgroundColor: theme.colors.light.green }
 });

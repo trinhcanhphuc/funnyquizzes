@@ -191,18 +191,18 @@ export const styles = StyleSheet.create({
     justifyContent: "flex-end"
   },
   shadow: {
-    shadowColor: theme.colors.black,
+    shadowColor: theme.colors.light.black,
     shadowOffset: { width: 0, height: 2 },
     shadowOpacity: 0.1,
     shadowRadius: 13,
     elevation: 2
   },
-  accent: { backgroundColor: theme.colors.accent },
-  primary: { backgroundColor: theme.colors.primary },
-  secondary: { backgroundColor: theme.colors.secondary },
-  tertiary: { backgroundColor: theme.colors.tertiary },
-  black: { backgroundColor: theme.colors.black },
-  white: { backgroundColor: theme.colors.white },
-  gray: { backgroundColor: theme.colors.gray },
-  gray2: { backgroundColor: theme.colors.gray2 }
+  accent: { backgroundColor: theme.colors.light.accent },
+  primary: { backgroundColor: theme.colors.light.primary },
+  secondary: { backgroundColor: theme.colors.light.secondary },
+  tertiary: { backgroundColor: theme.colors.light.tertiary },
+  black: { backgroundColor: theme.colors.light.black },
+  white: { backgroundColor: theme.colors.light.white },
+  gray: { backgroundColor: theme.colors.light.gray },
+  gray2: { backgroundColor: theme.colors.light.gray2 }
 });

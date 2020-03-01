@@ -15,7 +15,7 @@ function TermForm(props) {
 		>
 			<Text
 				caption
-				gray
+				black
 				height={24}
 				style={{ marginBottom: theme.sizes.base }}
 			>
@@ -24,7 +24,7 @@ function TermForm(props) {
             </Text>
 			<Text
 				caption
-				gray
+				black
 				height={24}
 				style={{ marginBottom: theme.sizes.base }}
 			>
@@ -33,7 +33,7 @@ function TermForm(props) {
             </Text>
 			<Text
 				caption
-				gray
+				black
 				height={24}
 				style={{ marginBottom: theme.sizes.base }}
 			>
@@ -43,7 +43,7 @@ function TermForm(props) {
             </Text>
 			<Text
 				caption
-				gray
+				black
 				height={24}
 				style={{ marginBottom: theme.sizes.base }}
 			>
@@ -53,7 +53,7 @@ function TermForm(props) {
             </Text>
 			<Text
 				caption
-				gray
+				black
 				height={24}
 				style={{ marginBottom: theme.sizes.base }}
 			>
@@ -66,7 +66,7 @@ function TermForm(props) {
             </Text>
 			<Text
 				caption
-				gray
+				black
 				height={24}
 				style={{ marginBottom: theme.sizes.base }}
 			>
@@ -76,7 +76,7 @@ function TermForm(props) {
             </Text>
 			<Text
 				caption
-				gray
+				black
 				height={24}
 				style={{ marginBottom: theme.sizes.base }}
 			>
@@ -88,7 +88,7 @@ function TermForm(props) {
             </Text>
 			<Text
 				caption
-				gray
+				black
 				height={24}
 				style={{ marginBottom: theme.sizes.base }}
 			>
@@ -98,7 +98,7 @@ function TermForm(props) {
             </Text>
 			<Text
 				caption
-				gray
+				black
 				height={24}
 				style={{ marginBottom: theme.sizes.base }}
 			>
@@ -110,7 +110,7 @@ function TermForm(props) {
             </Text>
 			<Text
 				caption
-				gray
+				black
 				height={24}
 				style={{ marginBottom: theme.sizes.base }}
 			>

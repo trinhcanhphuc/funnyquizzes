@@ -91,7 +91,7 @@ const styles = StyleSheet.create({
   // default style
   text: {
     fontSize: theme.sizes.font,
-    color: theme.colors.black
+    color: theme.colors.light.black
   },
   // variations
   regular: {
@@ -111,16 +111,17 @@ const styles = StyleSheet.create({
   },
   // position
   center: { textAlign: "center" },
+  left: { textAlign: "left" },
   right: { textAlign: "right" },
   // colors
-  accent: { color: theme.colors.accent },
-  primary: { color: theme.colors.primary },
-  secondary: { color: theme.colors.secondary },
-  tertiary: { color: theme.colors.tertiary },
-  black: { color: theme.colors.black },
-  white: { color: theme.colors.white },
-  gray: { color: theme.colors.gray },
-  gray2: { color: theme.colors.gray2 },
+  accent: { color: theme.colors.light.accent },
+  primary: { color: theme.colors.light.primary },
+  secondary: { color: theme.colors.light.secondary },
+  tertiary: { color: theme.colors.light.tertiary },
+  black: { color: theme.colors.light.black },
+  white: { color: theme.colors.light.white },
+  gray: { color: theme.colors.light.gray },
+  gray2: { color: theme.colors.light.gray2 },
   // fonts
   h1: theme.fonts.h1,
   h2: theme.fonts.h2,

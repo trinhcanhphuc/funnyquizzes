@@ -2,18 +2,18 @@ import React, { Component } from "react";
 import {
   Image,
   StyleSheet,
-  Switch,
 } from "react-native";
+import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
 import { ScrollView } from "react-native-gesture-handler";
 import * as Font from 'expo-font';
 
 import { Button, Block, Text } from "../components";
 import { theme } from "../constants";
 import { lang } from "../constants";
-import { CreateTableSetting, CreateSetting, GetSetting, UpdateSetting } from "../services/setting";
+import { UpdateSetting } from "../services/setting";
 
 
-class Settings extends Component {
+class Languages extends Component {
   static navigationOptions = {
     header: null
   };
@@ -21,7 +21,6 @@ class Settings extends Component {
   constructor() {
     super()
     this.state = {
-      sound: true,
       lang: "en"
     }
   }
@@ -32,79 +31,85 @@ class Settings extends Component {
       'sf-pro-display-bold': require('../assets/fonts/SF-Pro-Display-Bold.otf'),
       'sf-pro-rounded-bold': require('../assets/fonts/SF-Pro-Rounded-Bold.otf'),
     });
-    CreateTableSetting().then((result) => {
-      CreateSetting(true, "en");
-    });
-    GetSetting().then((result) => {
-      if (result) {
-        this.setState({
-          sound: parseInt(result.sound) == 1 ? true : false,
-          lang: result.lang
-        });
-      }
+    const { navigation } = this.props
+    this.setState({
+      lang: navigation.state.params.lang
     })
   }
 
-  saveSetting = (sound) => {
+  saveSetting = (lang) => {
+    console.log(lang)
     this.setState({
-      sound: sound
+      lang: lang
     });
-    UpdateSetting(sound == true ? 1 : 0, null)
-  };
-  
-  onGoBack = data => {
-    this.setState(data)
+    UpdateSetting(null, lang);
   };
 
   render() {
     const { navigation } = this.props
+    const langs = lang.langs
     return (
-      <Block style={ styles.setting }>
+      <Block
+        style={styles.container}
+      >
         <Button
-          onPress={() => navigation.goBack() }
+          onPress={() => {
+              navigation.goBack()
+              navigation.state.params.onGoBack({ lang: this.state.lang });
+            }
+          }
           style={ styles.navigation }
           >
           <Image source={require("../assets/icons/back.png")}></Image>
           <Text style={ styles.navigation_text }> Lists</Text>
         </Button>
-        <Text style={styles.title}>Settings</Text>
+        <Text style={ styles.title }>Languages</Text>
         <ScrollView
           showsVerticalScrollIndicator={false}>
-          <Block color="white"
-            style={styles.section}>
-            <Text style={ styles.section_text }>Sound</Text>
-            <Switch
-              onValueChange = { () => 
-                this.saveSetting(!this.state.sound, null)
-              }
-              value = { this.state.sound }
-            />
-          </Block>
-          <Button color="white"
-            onPress={() => this.props.navigation.navigate("Languages", {
-              lang: this.state.lang,
-              onGoBack: this.onGoBack
-            })}
-            style={styles.section}>
-            <Text style={ styles.section_text }>Language</Text>
-            <Image source={require("../assets/icons/next.png")}></Image>
-          </Button>
-          <Button color="white"
-            style={styles.section}>
-            <Text style={ styles.section_text }>Reset score</Text>
-            <Image source={require("../assets/icons/next.png")}></Image>
-          </Button>
+          <RadioForm
+            formHorizontal={false}
+            animation={true}
+            initial={0}
+          />
+            {
+              langs.map((obj, i) => (
+                <RadioButton labelHorizontal={true} key={i} >
+                  <RadioButtonInput
+                    obj={obj}
+                    index={i}
+                    isSelected={this.state.lang === obj.value}
+                    onPress={(obj) => { 
+                      this.saveSetting(obj);
+                    }}
+                    borderWidth={2}
+                    buttonInnerColor={theme.colors.light.orange}
+                    buttonOuterColor={this.state.lang === obj.value ? theme.colors.light.orange : theme.colors.light.gray2}
+                    buttonStyle={ styles.radio_input }
+                  />
+                  <RadioButtonLabel
+                    obj={obj}
+                    index={i}
+                    labelHorizontal={true}
+                    onPress={(obj) => { 
+                      this.saveSetting(obj);
+                    }}
+                    labelStyle={{fontSize: theme.sizes.body, color: theme.colors.light.black}}
+                    labelWrapStyle={{}}
+                  />
+                </RadioButton>
+              ))
+            }  
         </ScrollView>
       </Block>
     );
   }F
 }
 
-Settings.defaultProps = {
+Languages.defaultProps = {
   langs: lang.langs
 };
 
-export default Settings;
+export default Languages;
 
 const styles = StyleSheet.create({
   modal: {
@@ -149,8 +154,7 @@ const styles = StyleSheet.create({
     maxHeight: theme.sizes.maxHeight,
     borderRadius: theme.sizes.radius,
     backgroundColor: theme.colors.light.white,
-    marginTop: theme.sizes.base,
-    marginBottom: 0,
+    marginBottom: theme.sizes.base,
     padding: theme.sizes.base
   },
   section_text: {

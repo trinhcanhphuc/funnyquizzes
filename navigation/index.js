@@ -13,6 +13,7 @@ import Explore from "../screens/Explore";
 import Browse from "../screens/Browse";
 import Product from "../screens/Product";
 import Settings from "../screens/Settings";
+import Languages from "../screens/Languages";
 
 import { theme } from "../constants";
 
@@ -28,7 +29,8 @@ const screens = createStackNavigator(
     Explore,
     Browse,
     Product,
-    Settings
+    Settings,
+    Languages
   },
   {
     defaultNavigationOptions: {

@@ -49,14 +49,24 @@ export function GetSetting() {
 
 export function UpdateSetting(sound, lang) {
   return new Promise((resolve, reject) => {
+    var sql = "UPDATE setting SET sound = ?, lang = ? WHERE id = 1"
+    var sql_params = [sound, lang]
+    if (!lang) {
+      sql = "UPDATE setting SET sound = ? WHERE id = 1",
+      sql_params = [sound]
+    }
+    else if (!sound) {
+      sql = "UPDATE setting SET lang = ? WHERE id = 1",
+      sql_params = [lang]
+    }
     db.transaction(tx => {
       tx.executeSql(
-        "UPDATE setting SET sound = ?, lang = ? WHERE id = 1",
-        [sound, lang],
+        sql,
+        sql_params,
         () => {
           resolve(true)
         }
-      );
-    });
-  });
+      )
+    })
+  })
 }
