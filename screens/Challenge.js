@@ -46,23 +46,26 @@ class Challenge extends Component {
 
   renderOptions(challenge) {
     return (
-      <Block row center middle style={styles.container}>
+      <Block row center middle>
         <FlatList
           horizontal
           pagingEnabled
-          scrollEnabled
+          scrollEnabled={false}
           showsHorizontalScrollIndicator={false}
           snapToAlignment="center"
           data={challenge.options.split(',')}
           renderItem={({ item }) => (
-            <Button color="green" card
-            style={{width: 70, height: 70, margin: 10 }}
+            <Button color="#7DB5FF" card
+            style={{width: 75, height: 75, margin: 10, borderRadius: 10,
+              shadowOffset:{  width: 5,  height: 5 },
+              shadowColor: 'rgba(0, 0, 0, 0.2)',
+              shadowOpacity: 1.0, flex: 1 }}
             onPress={() => {
                 parseInt(item) == parseInt(challenge.answer) ? this.playNextChallenge(challenge) : this.setState({ showWrong: true })
               }
             }
             >
-              <Text h2 center bold white style={styles.content}>
+              <Text h2 center white style={styles.content}>
                 { item }
               </Text>
             </Button>
@@ -178,15 +181,18 @@ class Challenge extends Component {
     const challengeId = navigation.state.params.challengeId
     const challenge = GetChallengeById(challengeId);
     return (
-      <Block>
+      <Block style={ styles.setting }>
+        <Button
+          onPress={() => navigation.goBack() }
+          style={ styles.navigation }
+          >
+          <Image source={require("../assets/icons/back.png")}></Image>
+          <Text style={ styles.navigation_text }> Lists</Text>
+        </Button>
         <Block center bottom flex={0.4}>
-          <Text h1 center bold color="red">
+          <Text h1 center bold color="red" style={{
+    fontFamily: 'sf-pro-rounded-bold'}}>
             Challenge {challenge.id}
-          </Text>
-        </Block>
-        <Block center>
-          <Text h1 center bold>
-            {challenge.question}
           </Text>
         </Block>
         <Block>
@@ -206,14 +212,34 @@ Challenge.defaultProps = {
 export default Challenge;
 
 const styles = StyleSheet.create({
+  setting: {
+    padding: theme.sizes.padding
+  },
+  container: {
+    backgroundColor: theme.colors.light.white,
+    padding: theme.sizes.padding
+  },
+  navigation: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'flex-start',
+    backgroundColor: 'transparent'
+  },
+  navigation_text: {
+    color: theme.colors.light.blue,
+    fontSize: theme.sizes.navigation,
+  },
   container: {
     padding: 20
   },
   content: {
-    height: "100%",
     fontSize: theme.fonts.h2.fontSize,
     color: "#fff",
     textAlign: "center",
-    textAlignVertical: "center"
+    textAlignVertical: "center",
+    shadowOffset:{  width: 3,  height: 3 },
+    shadowColor: 'rgba(0, 0, 0, 0.5)',
+    shadowOpacity: 1.0,
+    fontFamily: 'sf-pro-rounded-bold'
   }
 });

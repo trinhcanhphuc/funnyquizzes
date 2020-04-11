@@ -3,6 +3,7 @@ import {
   Image,
   StyleSheet,
 } from "react-native";
+import { AppLoading } from "expo";
 import RadioForm, {RadioButton, RadioButtonInput, RadioButtonLabel} from 'react-native-simple-radio-button';
 import { ScrollView } from "react-native-gesture-handler";
 import * as Font from 'expo-font';
@@ -21,24 +22,29 @@ class Languages extends Component {
   constructor() {
     super()
     this.state = {
-      lang: "en"
+      lang: "en",
+      fontLoaded: false
     }
   }
 
   componentDidMount() {
-    Font.loadAsync({
-      'sf-pro-display-regular': require('../assets/fonts/SF-Pro-Display-Regular.otf'),
-      'sf-pro-display-bold': require('../assets/fonts/SF-Pro-Display-Bold.otf'),
-      'sf-pro-rounded-bold': require('../assets/fonts/SF-Pro-Rounded-Bold.otf'),
-    });
+    this.loadFontAsync()
     const { navigation } = this.props
     this.setState({
       lang: navigation.state.params.lang
     })
   }
 
+  loadFontAsync = async () => {
+    await Font.loadAsync({
+      'sf-pro-display-regular': require('../assets/fonts/SF-Pro-Display-Regular.otf'),
+      'sf-pro-display-bold': require('../assets/fonts/SF-Pro-Display-Bold.otf'),
+      'sf-pro-rounded-bold': require('../assets/fonts/SF-Pro-Rounded-Bold.otf'),
+    })
+    this.setState({ fontLoaded: true })
+  }
+
   saveSetting = (lang) => {
-    console.log(lang)
     this.setState({
       lang: lang
     });
@@ -46,6 +52,8 @@ class Languages extends Component {
   };
 
   render() {
+    if ( !this.state.fontLoaded )
+      return <AppLoading />
     const { navigation } = this.props
     const langs = lang.langs
     return (
@@ -131,7 +139,7 @@ const styles = StyleSheet.create({
   },
   navigation_text: {
     color: theme.colors.light.blue,
-    fontSize: theme.sizes.h2,
+    fontSize: theme.sizes.navigation,
   },
   title: {
     fontSize: theme.sizes.title,

@@ -123,13 +123,14 @@ class Home extends Component {
                 justifyContent: "space-between",
                 alignItems: "center",
                 paddingLeft: "5%",
-                paddingRight: "5%"
+                paddingRight: "5%",
+                marginTop: 50
               }}>
               <Button color="red" shadow icon
-              style={{width:150, paddingLeft: "15%"}}
+              style={{width:150}}
               onPress={() => BackHandler.exitApp()}
                 >
-                <Text center semibold white transform="uppercase">
+                <Text left semibold white transform="uppercase" style={{  marginRight: '20%', fontSize: theme.sizes.h3 }}>
                   Yes
                 </Text>
                 <Image source={require("../assets/icons/yes.png")} style={styles.btnIcon}></Image>
@@ -137,7 +138,7 @@ class Home extends Component {
               <Button color="white" shadow icon
               style={{width:150, paddingLeft: "15%"}}
               onPress={() => this.setState({ showExitForm: false })}>
-                <Text center semibold black transform="uppercase">
+                <Text center semibold black transform="uppercase" style={{  marginRight: '25%', fontSize: theme.sizes.h3 }}>
                   No
                 </Text>
                 <Image source={require("../assets/icons/no.png")} style={styles.btnIcon}></Image>

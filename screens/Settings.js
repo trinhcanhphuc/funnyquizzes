@@ -4,6 +4,7 @@ import {
   StyleSheet,
   Switch,
 } from "react-native";
+import { AppLoading } from "expo";
 import { ScrollView } from "react-native-gesture-handler";
 import * as Font from 'expo-font';
 
@@ -22,16 +23,13 @@ class Settings extends Component {
     super()
     this.state = {
       sound: true,
-      lang: "en"
+      lang: "en",
+      fontLoaded: false
     }
   }
 
   componentDidMount() {
-    Font.loadAsync({
-      'sf-pro-display-regular': require('../assets/fonts/SF-Pro-Display-Regular.otf'),
-      'sf-pro-display-bold': require('../assets/fonts/SF-Pro-Display-Bold.otf'),
-      'sf-pro-rounded-bold': require('../assets/fonts/SF-Pro-Rounded-Bold.otf'),
-    });
+    this.loadFontAsync()
     CreateTableSetting().then((result) => {
       CreateSetting(true, "en");
     });
@@ -45,18 +43,29 @@ class Settings extends Component {
     })
   }
 
+  loadFontAsync = async () => {
+    await Font.loadAsync({
+      'sf-pro-display-regular': require('../assets/fonts/SF-Pro-Display-Regular.otf'),
+      'sf-pro-display-bold': require('../assets/fonts/SF-Pro-Display-Bold.otf'),
+      'sf-pro-rounded-bold': require('../assets/fonts/SF-Pro-Rounded-Bold.otf'),
+    })
+    this.setState({ fontLoaded: true })
+  }
+
   saveSetting = (sound) => {
     this.setState({
       sound: sound
     });
     UpdateSetting(sound == true ? 1 : 0, null)
   };
-  
+
   onGoBack = data => {
     this.setState(data)
   };
 
   render() {
+    if ( !this.state.fontLoaded )
+      return <AppLoading />
     const { navigation } = this.props
     return (
       <Block style={ styles.setting }>
@@ -74,7 +83,7 @@ class Settings extends Component {
             style={styles.section}>
             <Text style={ styles.section_text }>Sound</Text>
             <Switch
-              onValueChange = { () => 
+              onValueChange = { () =>
                 this.saveSetting(!this.state.sound, null)
               }
               value = { this.state.sound }
@@ -97,7 +106,7 @@ class Settings extends Component {
         </ScrollView>
       </Block>
     );
-  }F
+  }
 }
 
 Settings.defaultProps = {
@@ -126,7 +135,7 @@ const styles = StyleSheet.create({
   },
   navigation_text: {
     color: theme.colors.light.blue,
-    fontSize: theme.sizes.h2,
+    fontSize: theme.sizes.navigation,
   },
   title: {
     fontSize: theme.sizes.title,

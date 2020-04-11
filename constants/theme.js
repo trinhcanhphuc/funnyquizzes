@@ -6,7 +6,7 @@ const colors = {
     tertiary: "#FFE358",
     black: "#323643",
     white: "#FFFFFF",
-    gray: "#F2F2F9",
+    gray: "#727C8E",
     gray2: "#C5CCD6",
     red: "#FF6865",
     yellow: "#EDAD35",
@@ -40,8 +40,9 @@ const sizes = {
 
   // font sizes
   h1: 50,
-  h2: 20,
+  h2: 30,
   h3: 18,
+  navigation: 20,
   title: 36,
   header: 18,
   body: 16,
