@@ -187,12 +187,17 @@ class Challenge extends Component {
           style={ styles.navigation }
           >
           <Image source={require("../assets/icons/back.png")}></Image>
-          <Text style={ styles.navigation_text }> Lists</Text>
+          <Text style={ styles.navigation_text }> Challenge {challenge.id}</Text>
         </Button>
         <Block center bottom flex={0.4}>
           <Text h1 center bold color="red" style={{
     fontFamily: 'sf-pro-rounded-bold'}}>
             Challenge {challenge.id}
+          </Text>
+        </Block>
+        <Block center>
+          <Text h1 bold style={{ textAlign: 'center', textAlignVertical: 'center', 'marginTop': 100 }}>
+            {challenge.question}
           </Text>
         </Block>
         <Block>

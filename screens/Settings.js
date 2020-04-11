@@ -74,12 +74,12 @@ class Settings extends Component {
           style={ styles.navigation }
           >
           <Image source={require("../assets/icons/back.png")}></Image>
-          <Text style={ styles.navigation_text }> Lists</Text>
+          <Text style={ styles.navigation_text }> Settings</Text>
         </Button>
         <Text style={styles.title}>Settings</Text>
         <ScrollView
           showsVerticalScrollIndicator={false}>
-          <Block color="white"
+          {/* <Block color="white"
             style={styles.section}>
             <Text style={ styles.section_text }>Sound</Text>
             <Switch
@@ -88,7 +88,7 @@ class Settings extends Component {
               }
               value = { this.state.sound }
             />
-          </Block>
+          </Block> */}
           <Button color="white"
             onPress={() => this.props.navigation.navigate("Languages", {
               lang: this.state.lang,
@@ -98,11 +98,11 @@ class Settings extends Component {
             <Text style={ styles.section_text }>Language</Text>
             <Image source={require("../assets/icons/next.png")}></Image>
           </Button>
-          <Button color="white"
+          {/* <Button color="white"
             style={styles.section}>
             <Text style={ styles.section_text }>Reset score</Text>
             <Image source={require("../assets/icons/next.png")}></Image>
-          </Button>
+          </Button> */}
         </ScrollView>
       </Block>
     );
@@ -120,7 +120,7 @@ const styles = StyleSheet.create({
     width: '100%'
   },
   setting: {
-    backgroundColor: theme.colors.light.gray,
+    backgroundColor: "#F6F6F6",
     padding: theme.sizes.padding
   },
   container: {

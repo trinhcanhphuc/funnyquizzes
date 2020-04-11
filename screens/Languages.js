@@ -69,7 +69,7 @@ class Languages extends Component {
           style={ styles.navigation }
           >
           <Image source={require("../assets/icons/back.png")}></Image>
-          <Text style={ styles.navigation_text }> Lists</Text>
+          <Text style={ styles.navigation_text }> Languages</Text>
         </Button>
         <Text style={ styles.title }>Languages</Text>
         <ScrollView

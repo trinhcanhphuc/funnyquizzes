@@ -107,7 +107,7 @@ class Challenges extends Component {
           style={ styles.navigation }
           >
           <Image source={require("../assets/icons/back.png")}></Image>
-          <Text style={ styles.navigation_text }> Lists</Text>
+          <Text style={ styles.navigation_text }> Challenges</Text>
         </Button>
         <Block center bottom flex={0.4} style={{marginBottom: 100}}>
           <Text h1 center bold style={{ fontFamily: 'sf-pro-rounded-bold' }}>

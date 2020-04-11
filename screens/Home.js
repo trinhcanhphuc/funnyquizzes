@@ -58,10 +58,10 @@ class Home extends Component {
           </Text>
           <Image source={require("../assets/icons/exit.png")} style={styles.btnIcon}></Image>
         </Button>
-          <Text center body white style={{marginTop: 50}}
-          onPress={() => this.setState({ showTermForm: true })} >
-            Terms of service
-          </Text>
+        {/* <Text center body white style={{marginTop: 50}}
+        onPress={() => this.setState({ showTermForm: true })} >
+          Terms of service
+        </Text> */}
       </Block>
     )
   }
@@ -127,7 +127,7 @@ class Home extends Component {
                 marginTop: 50
               }}>
               <Button color="red" shadow icon
-              style={{width:150}}
+              style={{width:150, paddingLeft: "15%"}}
               onPress={() => BackHandler.exitApp()}
                 >
                 <Text left semibold white transform="uppercase" style={{  marginRight: '20%', fontSize: theme.sizes.h3 }}>
@@ -164,7 +164,7 @@ class Home extends Component {
             </Text>
           </Block>
           {this.renderButtons()}
-          {this.renderTermForm()}
+          {/* {this.renderTermForm()} */}
           {this.renderExitForm()}
         </ImageBackground>
       </Block>
@@ -180,7 +180,8 @@ export default Home;
 const styles = StyleSheet.create({
   btn_home: {
     marginTop: theme.sizes.base,
-    marginBottom: 0
+    marginBottom: 0,
+    justifyContent: "flex-end"
   },
   btn_home_text: {
     fontSize: theme.sizes.h3
