@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="259" height="76" viewBox="0 0 259 76">
+  <defs>
+    <filter id="base" x="0" y="0" width="259" height="76" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-color="#ff6969" flood-opacity="0.396"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Return_Home" x="65.5" y="17.5" width="131" height="37" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="button" transform="translate(21 -591)">
+    <g transform="matrix(1, 0, 0, 1, -21, 591)" filter="url(#base)">
+      <rect id="base-2" data-name="base" width="229" height="46" rx="23" transform="translate(15 10)" fill="#ff6969"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -21, 591)" filter="url(#Return_Home)">
+      <text id="Return_Home-2" data-name="Return Home" transform="translate(126 38)" fill="#fff" font-size="14" font-family="Noteworthy-Bold, Noteworthy" font-weight="700" letter-spacing="0.06em"><tspan x="-57.199" y="0">RETURN HOME</tspan></text>
+    </g>
+    <g id="icon" transform="translate(186.369 609)">
+      <rect id="Rectangle_2" data-name="Rectangle 2" width="28.797" height="29.62" rx="14.399" fill="#fff"/>
+    </g>
+    <path id="Home" d="M87.615,83.062l-6.652-5.83a.489.489,0,0,0-.645,0l-6.652,5.83a.489.489,0,0,0,.645.736l.515-.451v7.275a.489.489,0,0,0,.489.489H85.966a.489.489,0,0,0,.489-.489V83.346l.515.451a.489.489,0,0,0,.645-.736Zm-8.1,7.07V86.1H81.77v4.029H79.511Zm5.966-7.639v7.639H82.749V85.614a.489.489,0,0,0-.489-.489H79.022a.489.489,0,0,0-.489.489v4.519H75.8V82.493s0,0,0,0l4.837-4.239,4.837,4.239S85.477,82.491,85.477,82.493Z" transform="translate(120.5 538.89)" fill="#ff6969" stroke="#ff6969" stroke-width="0.2"/>
+  </g>
+</svg>

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="206" height="52" viewBox="0 0 206 52">
+  <defs>
+    <filter id="Rectangle_4" x="0" y="0" width="206" height="52" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feFlood flood-color="#ff6969" flood-opacity="0.396"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Button" transform="translate(-17 -600)">
+    <g transform="matrix(1, 0, 0, 1, 17, 600)" filter="url(#Rectangle_4)">
+      <rect id="Rectangle_4-2" data-name="Rectangle 4" width="200" height="46" rx="23" transform="translate(3 1)" fill="#ff6969"/>
+    </g>
+    <text id="EXIT" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" transform="translate(115.993 630)" stroke-width="1" font-size="14" font-family="Noteworthy-Bold, Noteworthy" font-weight="700" letter-spacing="0.06em"><tspan x="-16.958" y="0">EXIT</tspan></text>
+    <g id="Group_16" data-name="Group 16" transform="translate(183 609)">
+      <rect id="Rectangle_2" data-name="Rectangle 2" width="28.797" height="29.62" rx="14.399" fill="#e8e8e8"/>
+      <g id="Icon_Close" data-name="Icon Close" transform="translate(9 9)">
+        <path id="close" d="M10.573,11.761l0,0L6,7.119,1.43,11.76h0A.833.833,0,0,1,.844,12,.851.851,0,0,1,0,11.143a.861.861,0,0,1,.237-.595h0L4.715,6,.294,1.507A.862.862,0,0,1,0,.857.851.851,0,0,1,.844,0a.831.831,0,0,1,.583.239l0,0L6,4.881,10.57.24h0A.832.832,0,0,1,11.156,0,.851.851,0,0,1,12,.857a.861.861,0,0,1-.237.595h0L7.285,6l4.421,4.491a.862.862,0,0,1,.294.65.851.851,0,0,1-.844.857A.831.831,0,0,1,10.573,11.761Z" transform="translate(0)" fill="#ff6969" stroke="#ff6865" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+    </g>
+  </g>
+</svg>

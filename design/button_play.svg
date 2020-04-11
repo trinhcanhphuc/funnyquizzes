@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="206" height="52" viewBox="0 0 206 52">
+  <defs>
+    <filter id="Path_152" x="0" y="0" width="206" height="52" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feFlood flood-color="#ff6969" flood-opacity="0.396"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Button" transform="translate(-17 -600)">
+    <g transform="matrix(1, 0, 0, 1, 17, 600)" filter="url(#Path_152)">
+      <path id="Path_152-2" data-name="Path 152" d="M23,0H177a23,23,0,0,1,0,46H23A23,23,0,0,1,23,0Z" transform="translate(3 1)" fill="#00b894"/>
+    </g>
+    <text id="PLAY" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" transform="translate(116.033 631)" stroke-width="1" font-size="14" font-family="Noteworthy-Bold, Noteworthy" font-weight="700" letter-spacing="0.06em"><tspan x="-20.099" y="0">PLAY</tspan></text>
+    <g id="Group_16" data-name="Group 16" transform="translate(183 609)">
+      <rect id="Rectangle_2" data-name="Rectangle 2" width="28.797" height="29.62" rx="14.399" fill="#e8e8e8"/>
+      <g id="Icon_Play" data-name="Icon Play" transform="translate(11 9)">
+        <path id="Polygon_1" data-name="Polygon 1" d="M6,0l6,10H0Z" transform="translate(10) rotate(90)" fill="#00b894" stroke="#00b994" stroke-linecap="round" stroke-linejoin="round" stroke-width="3"/>
+      </g>
+    </g>
+  </g>
+</svg>

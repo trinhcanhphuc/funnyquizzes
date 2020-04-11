@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="131" height="76" viewBox="0 0 131 76">
+  <defs>
+    <filter id="base" x="0" y="0" width="131" height="76" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-color="#727c8e" flood-opacity="0.153"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="share_this" data-name="share this" transform="translate(-5 -591)">
+    <g transform="matrix(1, 0, 0, 1, 5, 591)" filter="url(#base)">
+      <rect id="base-2" data-name="base" width="101" height="46" rx="23" transform="translate(15 10)" fill="#fff"/>
+    </g>
+    <text id="NO" transform="translate(61 629)" fill="#727c8e" font-size="12" font-family="Noteworthy-Bold, Noteworthy" font-weight="700" letter-spacing="0.06em"><tspan x="-9.24" y="0">NO</tspan></text>
+    <g id="icon" transform="translate(83.839 609)">
+      <rect id="Rectangle_2" data-name="Rectangle 2" width="28.797" height="29.62" rx="14.399" fill="#727c8e"/>
+      <g id="share-arrow" transform="translate(9.334 8.342)">
+        <g id="Group_27" data-name="Group 27">
+          <path id="Path_14" data-name="Path 14" d="M117.438,12.71a.724.724,0,0,0,.722-.722V2.211l3.079,2.742a.724.724,0,1,0,.962-1.082L118.051.179a.726.726,0,0,0-.926-.024.726.726,0,0,0-.313.289l-3.6,3.451a.723.723,0,1,0,1,1.046l2.5-2.405v9.452A.724.724,0,0,0,117.438,12.71Z" transform="translate(-112.993 0)" fill="#fff" stroke="#fff" stroke-width="0.7"/>
+        </g>
+      </g>
+    </g>
+  </g>
+</svg>

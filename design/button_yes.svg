@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="141" height="76" viewBox="0 0 141 76">
+  <defs>
+    <filter id="base" x="0" y="0" width="141" height="76" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-color="#ff6969" flood-opacity="0.396"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="YES" x="52.5" y="17.5" width="45" height="37" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="button" transform="translate(21.383 -591)">
+    <g transform="matrix(1, 0, 0, 1, -21.38, 591)" filter="url(#base)">
+      <rect id="base-2" data-name="base" width="111" height="46" rx="23" transform="translate(15 10)" fill="#ff6969"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -21.38, 591)" filter="url(#YES)">
+      <text id="YES-2" data-name="YES" transform="translate(70 38)" fill="#fff" font-size="14" font-family="Noteworthy-Bold, Noteworthy" font-weight="700" letter-spacing="0.06em"><tspan x="-14.026" y="0">YES</tspan></text>
+    </g>
+    <g id="icon" transform="translate(67.923 609)">
+      <rect id="Rectangle_2" data-name="Rectangle 2" width="28.797" height="29.62" rx="14.399" fill="#fff"/>
+      <path id="Path_11" data-name="Path 11" d="M26.582,16.758v0a.82.82,0,0,0-.252-.592h0l-4.937-4.937,0,0a.822.822,0,1,0-1.105,1.218L24.6,16.758,20.23,21.125h0a.823.823,0,0,0,1.163,1.163h0l4.937-4.937h0a.82.82,0,0,0,.252-.592Z" transform="translate(-8.481 -1.949)" fill="#ff6969" stroke="#ff6969" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

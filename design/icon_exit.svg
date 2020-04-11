@@ -1,0 +1,6 @@
+<svg id="Group_16" data-name="Group 16" xmlns="http://www.w3.org/2000/svg" width="28.797" height="29.62" viewBox="0 0 28.797 29.62">
+  <rect id="Rectangle_2" data-name="Rectangle 2" width="28.797" height="29.62" rx="14.399" fill="#e8e8e8"/>
+  <g id="Icon_Close" data-name="Icon Close" transform="translate(9 9)">
+    <path id="close" d="M10.573,11.761l0,0L6,7.119,1.43,11.76h0A.833.833,0,0,1,.844,12,.851.851,0,0,1,0,11.143a.861.861,0,0,1,.237-.595h0L4.715,6,.294,1.507A.862.862,0,0,1,0,.857.851.851,0,0,1,.844,0a.831.831,0,0,1,.583.239l0,0L6,4.881,10.57.24h0A.832.832,0,0,1,11.156,0,.851.851,0,0,1,12,.857a.861.861,0,0,1-.237.595h0L7.285,6l4.421,4.491a.862.862,0,0,1,.294.65.851.851,0,0,1-.844.857A.831.831,0,0,1,10.573,11.761Z" transform="translate(0)" fill="#ff6969" stroke="#ff6865" stroke-linejoin="round" stroke-width="3"/>
+  </g>
+</svg>

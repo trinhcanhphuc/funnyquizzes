@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="259" height="76" viewBox="0 0 259 76">
+  <defs>
+    <filter id="base" x="0" y="0" width="259" height="76" filterUnits="userSpaceOnUse">
+      <feOffset dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feFlood flood-color="#ff6969" flood-opacity="0.396"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="RETRY" x="96.5" y="17.5" width="69" height="37" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="button" transform="translate(21 -591)">
+    <g transform="matrix(1, 0, 0, 1, -21, 591)" filter="url(#base)">
+      <rect id="base-2" data-name="base" width="229" height="46" rx="23" transform="translate(15 10)" fill="#ff6969"/>
+    </g>
+    <g transform="matrix(1, 0, 0, 1, -21, 591)" filter="url(#RETRY)">
+      <text id="RETRY-2" data-name="RETRY" transform="translate(126 38)" fill="#fff" font-size="14" font-family="Noteworthy-Bold, Noteworthy" font-weight="700" letter-spacing="0.06em"><tspan x="-26.792" y="0">RETRY</tspan></text>
+    </g>
+    <g id="icon" transform="translate(186.369 609)">
+      <rect id="Rectangle_2" data-name="Rectangle 2" width="28.797" height="29.62" rx="14.399" fill="#fff"/>
+    </g>
+    <g id="layer1" transform="translate(194 618)">
+      <path id="path53" d="M7.938,1.625A6.031,6.031,0,0,0,2.559,4.937H4.225a4.6,4.6,0,0,1,8.25,1.939l-1.287,0,.967,1.684.965,1.682.975-1.678.975-1.678-1.156,0A6.031,6.031,0,0,0,7.937,1.625Zm-4.8,4.188L2.158,7.49,1.184,9.168l1.156,0a6.024,6.024,0,0,0,11.354,1.943H12.027a4.6,4.6,0,0,1-8.25-1.939l1.287,0L4.1,7.494Z" transform="translate(-1.184 -1.625)" fill="#f66965"/>
+    </g>
+  </g>
+</svg>
