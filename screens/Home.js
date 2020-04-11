@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import {
   Animated,
-  Dimensions,
   Image,
   Modal,
   StyleSheet,
@@ -33,14 +32,17 @@ class Home extends Component {
 
     return (
       <Block middle flex={0.5} margin={[0, theme.sizes.padding * 4]}>
-        <Button color="green" shadow icon onPress={() => navigation.navigate("Challenges")}>
-          <Text center semibold white transform="uppercase" color="white">
+        <Button color="green" shadow icon style={ styles.btn_home } 
+          onPress={() => navigation.navigate("Challenges")}>
+          <Text center semibold white transform="uppercase" color="white" style={ styles.btn_home_text, { marginRight: '30%', fontSize: theme.sizes.h3 } }>
             Play
           </Text>
           <Image source={require("../assets/icons/play.png")} style={styles.btnIcon}></Image>
         </Button>
-        <Button color="yellow" shadow icon onPress={() => navigation.navigate("Settings")}>
-          <Text center semibold  transform="uppercase" color="white">
+        <Button color="yellow" shadow icon style={ styles.btn_home }
+          onPress={() => navigation.navigate("Settings")}>
+          <Text center semibold transform="uppercase" color="white"
+          style={ styles.btn_home_text, { marginRight: '22%', fontSize: theme.sizes.h3 } }>
             Setting
           </Text>
           <Image
@@ -48,13 +50,15 @@ class Home extends Component {
             style={styles.btnIcon}>
           </Image>
         </Button>
-        <Button color="red" shadow icon onPress={() => this.setState({ showExitForm: true })}>
-          <Text center semibold transform="uppercase" color="white">
+        <Button color="red" shadow icon style={ styles.btn_home }
+          onPress={() => this.setState({ showExitForm: true })}>
+          <Text center semibold transform="uppercase" color="white"
+          style={ styles.btn_home_text, { marginRight: '30%', fontSize: theme.sizes.h3 } }>
             Exit
           </Text>
           <Image source={require("../assets/icons/exit.png")} style={styles.btnIcon}></Image>
         </Button>
-          <Text center caption white style={{marginTop: 50}}
+          <Text center body white style={{marginTop: 50}}
           onPress={() => this.setState({ showTermForm: true })} >
             Terms of service
           </Text>
@@ -84,7 +88,7 @@ class Home extends Component {
               color="green"
               onPress={() => this.setState({ showTermForm: false })}
             >
-              <Text center white>
+              <Text center white style={ styles.btn_home_text }>
                 I understand
               </Text>
             </Button>
@@ -119,13 +123,14 @@ class Home extends Component {
                 justifyContent: "space-between",
                 alignItems: "center",
                 paddingLeft: "5%",
-                paddingRight: "5%"
+                paddingRight: "5%",
+                marginTop: 50
               }}>
               <Button color="red" shadow icon
-              style={{width:150, paddingLeft: "15%"}}
+              style={{width:150}}
               onPress={() => BackHandler.exitApp()}
                 >
-                <Text center semibold white transform="uppercase">
+                <Text left semibold white transform="uppercase" style={{  marginRight: '20%', fontSize: theme.sizes.h3 }}>
                   Yes
                 </Text>
                 <Image source={require("../assets/icons/yes.png")} style={styles.btnIcon}></Image>
@@ -133,7 +138,7 @@ class Home extends Component {
               <Button color="white" shadow icon
               style={{width:150, paddingLeft: "15%"}}
               onPress={() => this.setState({ showExitForm: false })}>
-                <Text center semibold black transform="uppercase">
+                <Text center semibold black transform="uppercase" style={{  marginRight: '25%', fontSize: theme.sizes.h3 }}>
                   No
                 </Text>
                 <Image source={require("../assets/icons/no.png")} style={styles.btnIcon}></Image>
@@ -168,15 +173,20 @@ class Home extends Component {
 }
 
 Home.defaultProps = {
-  // icons: mocks.icons
 };
 
 export default Home;
 
 const styles = StyleSheet.create({
+  btn_home: {
+    marginTop: theme.sizes.base,
+    marginBottom: 0
+  },
+  btn_home_text: {
+    fontSize: theme.sizes.h3
+  },
   btnIcon: {
     width: 25,
-    height: 26,
-    justifyContent: "flex-end"
+    height: 26
   }
 });

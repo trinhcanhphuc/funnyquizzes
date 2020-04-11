@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="206" height="52" viewBox="0 0 206 52">
+  <defs>
+    <filter id="Path_153" x="0" y="0" width="206" height="52" filterUnits="userSpaceOnUse">
+      <feOffset dy="2" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feFlood flood-color="#ff6969" flood-opacity="0.396"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Button" transform="translate(-17 -600)">
+    <g transform="matrix(1, 0, 0, 1, 17, 600)" filter="url(#Path_153)">
+      <path id="Path_153-2" data-name="Path 153" d="M23,0H177a23,23,0,0,1,0,46H23A23,23,0,0,1,23,0Z" transform="translate(3 1)" fill="#edad35"/>
+    </g>
+    <text id="SETTING" fill="#fff" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" transform="translate(115.993 630)" stroke-width="1" font-size="14" font-family="Noteworthy-Bold, Noteworthy" font-weight="700" letter-spacing="0.06em"><tspan x="-32.051" y="0">SETTING</tspan></text>
+    <g id="Group_16" data-name="Group 16" transform="translate(183 609)">
+      <rect id="Rectangle_2" data-name="Rectangle 2" width="28.797" height="29.62" rx="14.399" fill="#e8e8e8"/>
+      <path id="settings" d="M15.452,7.795,13.9,6.462a.9.9,0,0,1-.64-1.544l1.1-1.1a.548.548,0,0,0,0-.775l-1.4-1.4a.548.548,0,0,0-.775,0l-1.1,1.1A.9.9,0,0,1,9.538,2.1V.548A.548.548,0,0,0,8.99,0H7.009a.548.548,0,0,0-.548.548V2.1a.9.9,0,0,1-1.544.64l-1.1-1.1a.548.548,0,0,0-.775,0l-1.4,1.4a.548.548,0,0,0,0,.775l1.1,1.1A.9.9,0,0,1,2.1,6.462H.548A.548.548,0,0,0,0,7.01V8.991a.548.548,0,0,0,.548.548H2.1a.9.9,0,0,1,.64,1.544l-1.1,1.1a.548.548,0,0,0,0,.775l1.4,1.4a.548.548,0,0,0,.775,0l1.1-1.1a.9.9,0,0,1,1.544.64v1.554A.548.548,0,0,0,7.01,16H8.991a.548.548,0,0,0,.548-.548V13.9a.9.9,0,0,1,1.544-.64l1.1,1.1a.548.548,0,0,0,.775,0l1.4-1.4a.548.548,0,0,0,0-.775l-1.1-1.1a.9.9,0,0,1,.64-1.544h1.554A.548.548,0,0,0,16,8.99V7.009C16,6.707,15.755,7.795,15.452,7.795ZM8,10.462A2.462,2.462,0,1,1,10.462,8,2.462,2.462,0,0,1,8,10.462Z" transform="translate(7 7)" fill="#efae20" stroke="#efae20" stroke-width="1"/>
+    </g>
+  </g>
+</svg>

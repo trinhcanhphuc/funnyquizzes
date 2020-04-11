@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="116" height="116" viewBox="0 0 116 116">
+  <defs>
+    <filter id="Path_168" x="0" y="0" width="116" height="116" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="close" x="32" y="34" width="51" height="51" filterUnits="userSpaceOnUse">
+      <feOffset dx="5" dy="5" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="2.5" result="blur-2"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="icon" transform="translate(2.5 2.5)">
+    <g transform="matrix(1, 0, 0, 1, -2.5, -2.5)" filter="url(#Path_168)">
+      <path id="Path_168-2" data-name="Path 168" d="M50.5,0A50.5,50.5,0,1,1,0,50.5,50.5,50.5,0,0,1,50.5,0Z" transform="translate(2.5 2.5)" fill="#f16662"/>
+    </g>
+    <g id="Icon_Close" data-name="Icon Close" transform="translate(32 34)">
+      <g transform="matrix(1, 0, 0, 1, -34.5, -36.5)" filter="url(#close)">
+        <path id="close-2" data-name="close" d="M31.718,35.284l-.007.007L17.995,21.357,4.29,35.28h0A2.5,2.5,0,0,1,2.532,36,2.552,2.552,0,0,1,0,33.428a2.582,2.582,0,0,1,.711-1.784h0L14.144,17.995.882,4.522A2.585,2.585,0,0,1,0,2.572,2.553,2.553,0,0,1,2.532,0,2.493,2.493,0,0,1,4.282.716L4.29.709,18.005,14.643,31.71.72h0A2.5,2.5,0,0,1,33.468,0,2.553,2.553,0,0,1,36,2.572a2.582,2.582,0,0,1-.711,1.784h0L21.856,18.005,35.118,31.478A2.586,2.586,0,0,1,36,33.428,2.553,2.553,0,0,1,33.468,36,2.493,2.493,0,0,1,31.718,35.284Z" transform="translate(34.5 36.5)" fill="#fff"/>
+      </g>
+    </g>
+  </g>
+</svg>

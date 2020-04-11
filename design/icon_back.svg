@@ -1,0 +1,13 @@
+<svg id="Back_Button" data-name="Back Button" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="23.5" height="18" viewBox="0 0 23.5 18">
+  <defs>
+    <clipPath id="clip-path">
+      <rect width="10.286" height="18" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Arrow_left_1" data-name="Arrow left 1">
+    <line id="Line_23" data-name="Line 23" x2="22" transform="translate(1.5 9.5)" fill="none" stroke="#ff6969" stroke-width="3"/>
+    <g id="Icon_Arrow_Left" data-name="Icon Arrow Left" clip-path="url(#clip-path)">
+      <path id="back" d="M30.286,20v0a1.281,1.281,0,0,0-.393-.925h0l-7.714-7.714,0,0a1.285,1.285,0,1,0-1.727,1.9L27.185,20,20.36,26.822h0a1.285,1.285,0,0,0,1.818,1.818h0l7.714-7.714h0A1.281,1.281,0,0,0,30.286,20Z" transform="translate(30.286 29) rotate(-180)" fill="#ff6969"/>
+    </g>
+  </g>
+</svg>
