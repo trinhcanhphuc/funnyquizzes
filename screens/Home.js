@@ -39,7 +39,7 @@ class Home extends Component {
           </Text>
           <Image source={require("../assets/icons/play.png")} style={styles.btnIcon}></Image>
         </Button>
-        <Button color="yellow" shadow icon style={ styles.btn_home }
+        {/* <Button color="yellow" shadow icon style={ styles.btn_home }
           onPress={() => navigation.navigate("Settings")}>
           <Text center semibold transform="uppercase" color="white"
           style={ styles.btn_home_text, { marginRight: '22%', fontSize: theme.sizes.h3 } }>
@@ -49,7 +49,7 @@ class Home extends Component {
             source={require("../assets/icons/setting.png")}
             style={styles.btnIcon}>
           </Image>
-        </Button>
+        </Button> */}
         <Button color="red" shadow icon style={ styles.btn_home }
           onPress={() => this.setState({ showExitForm: true })}>
           <Text center semibold transform="uppercase" color="white"

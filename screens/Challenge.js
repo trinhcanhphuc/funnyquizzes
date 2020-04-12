@@ -85,7 +85,7 @@ class Challenge extends Component {
       >
         <Block style={{marginTop: 100}}>
           <Block center>
-            <Image source={require("../assets/icons/correct.png")} style={{width:"30%", height:"32%"}}>
+            <Image source={require("../assets/icons/correct.png")}>
             </Image>
             <Text h1 center bold black>
               Congrats
@@ -94,7 +94,7 @@ class Challenge extends Component {
               Your answer is correct
             </Text>
           </Block>
-          <Block middle style={{width: "60%", marginLeft: 100}}>
+          <Block middle style={{width: "60%", marginLeft: '20%'}}>
             <Button color="red" shadow icon style={{paddingLeft: 50}} onPress={() => {
                 this.setState({showCorrect: false});
                 navigation.navigate("Challenge", {
@@ -122,7 +122,7 @@ class Challenge extends Component {
       >
         <Block style={{marginTop: 100}}>
           <Block center>
-            <Image source={require("../assets/icons/cup.png")} style={{width:"30%", height:"32%"}}>
+            <Image source={require("../assets/icons/cup.png")}>
             </Image>
             <Text h1 center bold black>
               Congrats
@@ -131,7 +131,7 @@ class Challenge extends Component {
               You are championship
             </Text>
           </Block>
-          <Block middle style={{width: "60%", marginLeft: 100}}>
+          <Block middle style={{width: "60%", marginLeft: '20%'}}>
             <Button color="red" shadow icon style={{paddingLeft: 60}} onPress={() => navigation.navigate("Home")}>
               <Text center semibold white transform="uppercase" color="white">
                 RETURN HOME
@@ -154,7 +154,7 @@ class Challenge extends Component {
       >
         <Block style={{marginTop: 100}}>
           <Block center>
-            <Image source={require("../assets/icons/wrong.png")} style={{width:"30%", height:"32%"}}>
+            <Image source={require("../assets/icons/wrong.png")}>
             </Image>
             <Text h1 center bold black>
               Wrong
@@ -163,7 +163,7 @@ class Challenge extends Component {
               Your answer is wrong
             </Text>
           </Block>
-          <Block middle style={{width: "60%", marginLeft: 100}}>
+          <Block middle style={{width: "60%", marginLeft: '20%'}}>
             <Button color="red" shadow icon style={{paddingLeft: 100}} onPress={() => this.setState({ showWrong: false })}>
               <Text center semibold white transform="uppercase" color="white">
                 RETRY
@@ -245,6 +245,7 @@ const styles = StyleSheet.create({
     shadowOffset:{  width: 3,  height: 3 },
     shadowColor: 'rgba(0, 0, 0, 0.5)',
     shadowOpacity: 1.0,
-    fontFamily: 'sf-pro-rounded-bold'
+    fontFamily: 'sf-pro-rounded-bold',
+    elevation: 3,
   }
 });

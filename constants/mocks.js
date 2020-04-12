@@ -106,7 +106,7 @@ const challenges = [
       "shape": "rectangle",
       "color": "blue"
     },
-    "options": "6, 8, 16, 32",
+    "options": "6, 8, 10, 12",
     "answer": "6"
   },
   {
@@ -117,7 +117,7 @@ const challenges = [
       "shape": "rectangle",
       "color": "blue"
     },
-    "options": "6, 8, 16, 32",
+    "options": "2, 6, 12, 18",
     "answer": "6"
   },
   {
@@ -150,7 +150,7 @@ const challenges = [
       "shape": "rectangle",
       "color": "blue"
     },
-    "options": "6, 10, 16, 25",
+    "options": "5, 15, 20, 25",
     "answer": "25"
   },
   {
@@ -161,40 +161,29 @@ const challenges = [
       "shape": "rectangle",
       "color": "blue"
     },
-    "options": "5, 10, 16, 25",
+    "options": "5, 10, 15, 20",
     "answer": "5"
   },
   {
     "id": 8,
-    "type": 1,
-    "question": "A + B = 60\nA - B = 40\nA / B = ?",
-    "style": {
-      "shape": "rectangle",
-      "color": "blue"
-    },
-    "options": "5, 10, 16, 25",
-    "answer": "5"
-  },
-  {
-    "id": 9,
     "type": 1,
     "question": "13, 18 = 31\n7, 25 = 32\n12, 30 = 42\n26, 13 = ?",
     "style": {
       "shape": "rectangle",
       "color": "blue"
     },
-    "options": "5, 10, 16, 39",
+    "options": "13, 22, 30, 39",
     "answer": "39"
   },
   {
-    "id": 10,
+    "id": 9,
     "type": 1,
     "question": "8 - 8 / 4 x 3 = ?",
     "style": {
       "shape": "rectangle",
       "color": "blue"
     },
-    "options": "2, 10, 16, 25",
+    "options": "1, 2, 3, 4",
     "answer": "2"
   }
 ];

@@ -158,7 +158,8 @@ const styles = StyleSheet.create({
     flex: 1,
     shadowOffset:{  width: 5,  height: 5 },
     shadowColor: 'rgba(0, 0, 0, 0.2)',
-    shadowOpacity: 1.0
+    shadowOpacity: 1.0,
+    elevation: 3,
   },
   cartInactive: {
     width: SCREEN_WIDTH - 60,
@@ -168,7 +169,8 @@ const styles = StyleSheet.create({
     flex: 1,
     shadowOffset:{  width: 2,  height: 2 },
     shadowColor: 'rgba(0, 0, 0, 0.2)',
-    shadowOpacity: 1.0
+    shadowOpacity: 1.0,
+    elevation: 3,
   },
   content: {
     fontSize: theme.fonts.h1.fontSize,
@@ -178,6 +180,7 @@ const styles = StyleSheet.create({
     shadowOffset:{  width: 3,  height: 3 },
     shadowColor: 'rgba(0, 0, 0, 0.5)',
     shadowOpacity: 1.0,
-    fontFamily: 'sf-pro-rounded-bold'
+    fontFamily: 'sf-pro-rounded-bold',
+    elevation: 3,
   }
 })
