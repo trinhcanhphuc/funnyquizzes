@@ -167,7 +167,7 @@ const styles = StyleSheet.create({
     backgroundColor: theme.colors.light.gray,
     borderRadius: 20,
     flex: 1,
-    shadowOffset:{  width: 2,  height: 2 },
+    shadowOffset:{ width: 2, height: 2 },
     shadowColor: 'rgba(0, 0, 0, 0.2)',
     shadowOpacity: 1.0,
     elevation: 3,
@@ -177,10 +177,13 @@ const styles = StyleSheet.create({
     color: "#fff",
     textAlign: "center",
     textAlignVertical: "center",
-    shadowOffset:{  width: 3,  height: 3 },
+    shadowOffset:{ width: 3, height: 3 },
     shadowColor: 'rgba(0, 0, 0, 0.5)',
     shadowOpacity: 1.0,
     fontFamily: 'sf-pro-rounded-bold',
     elevation: 3,
+    textShadowColor: 'rgba(0, 0, 0, 0.5)',
+    textShadowOffset: { width: 3, height: 3 },
+    textShadowRadius: 10
   }
 })

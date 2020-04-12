@@ -59,7 +59,8 @@ class Challenge extends Component {
             style={{width: 75, height: 75, margin: 10, borderRadius: 10,
               shadowOffset:{  width: 5,  height: 5 },
               shadowColor: 'rgba(0, 0, 0, 0.2)',
-              shadowOpacity: 1.0, flex: 1 }}
+              shadowOpacity: 1.0, flex: 1,
+              elevation: 3 }}
             onPress={() => {
                 parseInt(item) == parseInt(challenge.answer) ? this.playNextChallenge(challenge) : this.setState({ showWrong: true })
               }
@@ -247,5 +248,8 @@ const styles = StyleSheet.create({
     shadowOpacity: 1.0,
     fontFamily: 'sf-pro-rounded-bold',
     elevation: 3,
+    textShadowColor: 'rgba(0, 0, 0, 0.5)',
+    textShadowOffset: { width: 3, height: 3 },
+    textShadowRadius: 10
   }
 });
